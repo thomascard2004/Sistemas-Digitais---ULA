@@ -31,8 +31,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity controle_GTV is
     port(clock: in sdt_logic;
-         A
-
+          A : in  std_logic_vector (3 downto 0);
+          B : in  std_logic_vector (3 downto 0);
+          S : out  std_logic_vector (7 downto 0)
         )
 
 end controle_GTV;
