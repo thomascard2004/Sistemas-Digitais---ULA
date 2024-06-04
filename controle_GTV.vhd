@@ -33,7 +33,12 @@ entity controle_GTV is
     port(clock: in sdt_logic;
           A : in  std_logic_vector (3 downto 0);
           B : in  std_logic_vector (3 downto 0);
-          S : out  std_logic_vector (7 downto 0)
+          S : out  std_logic_vector (7 downto 0);
+         operacao : in STD_LOGIC_VECTOR(2 downto 0);
+         botao: in sdt_logic;
         )
 
 end controle_GTV;
+
+
+        
