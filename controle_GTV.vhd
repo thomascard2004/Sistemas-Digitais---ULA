@@ -35,10 +35,16 @@ entity controle_GTV is
           B : in  std_logic_vector (3 downto 0);
           S : out  std_logic_vector (7 downto 0);
          operacao : in STD_LOGIC_VECTOR(2 downto 0);
-         botao: in sdt_logic;
+         botao: in sdt_logic
         )
 
 end controle_GTV;
 
+architecture Behavial of controle_GTV
+
+
+    begin
+        
+end architecture;
 
         
