@@ -30,7 +30,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity controle_GTV is
-    port(
+    port(clock: in sdt_logic;
+         A
 
         )
 
