@@ -30,6 +30,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity controle_GTV is
-    port
+    port(
+
+        )
 
 end controle_GTV;
