@@ -30,11 +30,10 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Unidade_Logica is
-    Port (
-			A : in  STD_LOGIC_VECTOR (3 downto 0);
-			B : in  STD_LOGIC_VECTOR (3 downto 0);
-         	S : out  STD_LOGIC_VECTOR(3 downto 0);
-			operacao : in STD_LOGIC_VECTOR(2 downto 0));
+    Port (A : in  STD_LOGIC_VECTOR (3 downto 0);
+	B : in  STD_LOGIC_VECTOR (3 downto 0);
+        S : out  STD_LOGIC_VECTOR(3 downto 0);
+	operacao : in STD_LOGIC_VECTOR(2 downto 0));
 			
 end Unidade_Logica;
 
@@ -61,7 +60,7 @@ component multiplicador_GTV is
 end component;
 
 component complemento2 is
-    Port ( 	A : in  STD_LOGIC_VECTOR(3 downto 0);
+    Port ( A : in  STD_LOGIC_VECTOR(3 downto 0);
 			Soma: out std_logic_vector (3 downto 0);
 			Cout, S: out std_logic);
 end component;
