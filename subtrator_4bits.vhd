@@ -44,8 +44,6 @@ architecture Behavioral of subtrator_4bits is
 	
 signal C: std_logic_vector (4 downto 0);	
 signal InvB :std_logic_vector( 3 downto 0);
---signal Saida :std_logic_vector( 3 downto 0);
-
 
 begin
 
@@ -55,8 +53,6 @@ FS1: somador_GTV port map (A(0),InvB(0),'1',S(0),C(1));
 FS2: somador_GTV port map (A(1),InvB(1),c(1),S(1),C(2));
 FS3: somador_GTV port map (A(2),InvB(2),c(2),S(2),C(3));
 FS4: somador_GTV port map (A(3),InvB(3),c(3),S(3),C(4));
-
---S(3 downto 0) <= Saida;
 
 end Behavioral;
 
