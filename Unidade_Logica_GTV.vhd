@@ -32,7 +32,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity Unidade_Logica is
     Port (A : in  STD_LOGIC_VECTOR (3 downto 0);
 	B : in  STD_LOGIC_VECTOR (3 downto 0);
-        S : out  STD_LOGIC_VECTOR(3 downto 0);
+        S : out  STD_LOGIC_VECTOR(7 downto 0);
 	operacao : in STD_LOGIC_VECTOR(2 downto 0));
 			
 end Unidade_Logica;
@@ -71,7 +71,7 @@ signal auxsoma: STD_LOGIC_VECTOR (3 downto 0);
 
 
 signal auxsub: STD_LOGIC_VECTOR (3 downto 0);
-signal auxmult: STD_LOGIC_VECTOR (3 downto 0);
+signal auxmult: STD_LOGIC_VECTOR (7 downto 0);
 
 signal auxcoutcomp: STD_LOGIC_VECTOR (3 downto 0);
 signal auxScomp: STD_LOGIC_VECTOR (3 downto 0);
@@ -96,7 +96,7 @@ begin
 			--OR
 			when "001" => result <= A or B;
 			--NOT
-			when "010" => result <= A not B;
+			when "010" => result <= not A ;
 			--XOR
 			when "011" => result <= A xor B;
 			--ADD
@@ -108,10 +108,9 @@ begin
 			--COMP
 			when "111" => result <= auxcomp;
 
-			when others => ;
+			--when others => ;
 		end case;
 	end process;	
 
 
 end Behavioral;
-
