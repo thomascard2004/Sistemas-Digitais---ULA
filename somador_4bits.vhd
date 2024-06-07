@@ -17,6 +17,7 @@
 -- Additional Comments: 
 --
 ----------------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -44,12 +45,14 @@ end somador_4bits;
 	end component;
 
 begin
-	FA0: somador_GTV port map (A(0), B(0), cin, Soma(0), C(1));
+	FA0: somador_GTV port map (A(0), B(0), '0', Soma(0), C(1));
 	FA1: somador_GTV port map (A(1), B(1), c(1), Soma(1), C(2));
 	FA2: somador_GTV port map (A(2), B(2), c(2), Soma(2), C(3));
 	FA3: somador_GTV port map (A(3), B(3), c(3), Soma(3), C(4));
 	S <= C(3) xor C(4);
 	Cout <= C(4);
 end somador_4bits_structure;
+
+
 
 
