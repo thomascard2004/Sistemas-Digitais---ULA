@@ -92,23 +92,22 @@ begin
 	begin
 		case seletor is
 			--AND
-			when "000" => result <= A and B;
+			when "000" => result <= "0000" & (A and B);
 			--OR
-			when "001" => result <= A or B;
+			when "001" => result <= "0000" & (A or B);
 			--NOT
-			when "010" => result <= not A ;
+			when "010" => result <= "0000" & (not A);
 			--XOR
-			when "011" => result <= A xor B;
+			when "011" => result <= "0000" & (A xor B);
 			--ADD
-			when "100" => result <= auxsoma;
+			when "100" => result <= "0000" & auxsoma;
 			--SUB
-			when "101" => result <= auxsub;
+			when "101" => result <= "0000" & auxsub;
 			--MULT
 			when "110" => result <= auxmult;
 			--COMP
-			when "111" => result <= auxcomp;
+			when "111" => result <= "0000" & auxcomp;
 
-			--when others => ;
 		end case;
 	end process;	
 
